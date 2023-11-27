@@ -1,0 +1,24 @@
+.error_window_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.error_window_container Label {
+    -fx-wrap-text: true;
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #000000;
+}
+
+.error_window_container Button {
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-pref-width: 100;
+    -fx-font-size: 1.2em;
+    -fx-alignment: bottom-center;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #FFFFFF;
+}
+
+.error_window_container Button:hover {
+    -fx-cursor: hand;
+}
