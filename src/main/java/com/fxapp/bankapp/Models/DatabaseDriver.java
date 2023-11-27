@@ -24,13 +24,13 @@ public class DatabaseDriver {
             resultSet = statement.executeQuery(
                     "SELECT * FROM Clients WHERE PayeeAddress='"+pAddress+"' AND Password='"+password+"';");
         } catch (SQLException e) {
-            System.out.println("Couldn't get client data...");
+            System.out.println("Couldn't get client data..." + e.getMessage());
             return null;
         }
         return resultSet;
     }
 
-    public ResultSet getTransactions(String pAddress, int limit) {
+    public ResultSet getTransactions(String pAddress, int transactCount) {
         Statement statement;
         ResultSet resultSet;
         try {
@@ -38,7 +38,7 @@ public class DatabaseDriver {
             resultSet = statement.executeQuery(
                     "SELECT * FROM Transactions " +
                             "WHERE Sender='"+pAddress+"' " + "OR Receiver='"+pAddress+"' " +
-                            "ORDER BY ID DESC LIMIT "+limit+";");
+                            "ORDER BY ID DESC LIMIT "+transactCount+";");
         } catch (SQLException e) {
             System.out.println("Couldn't retrieve transactions: " + e.getMessage());
             return null;
