@@ -2,4 +2,7 @@ Final project for the "JavaFX Master Class: Create A Banking Application" course
 
 The project aims to build a didactic *as in not a real life* banking app.
 It implements Admin and User roles and uses a sqlite database for data persistence.
-The app is structured according to the Model View Controller design model. The views were created using .fxml files, styled with CSS. It implements a simple authentification mechanism using a username and a password, with different functionalities enabled according to user role (admin or simple user).
+The app is structured according to the Model View Controller design model.
+The views were created using .fxml files, styled with CSS.
+It implements a simple authentication mechanism using a username and a password,
+with different functionalities enabled according to user role (admin or simple user).
