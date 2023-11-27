@@ -106,7 +106,8 @@ public class Model {
     }
 
     private void prepareTransactions(ObservableList<Transaction> transactions, int limit) {
-        ResultSet resultSet = getDatabaseDriver().getTransactions(this.client.getPayeeAddressProperty().get(), limit);
+        String pAddress = this.client.getPayeeAddressProperty().get();
+        ResultSet resultSet = getDatabaseDriver().getTransactions(pAddress, limit);
         if(resultSet == null) {
             setErrorMsg("Transaction result set is null!");
             getViewFactory().showErrorWindow();
