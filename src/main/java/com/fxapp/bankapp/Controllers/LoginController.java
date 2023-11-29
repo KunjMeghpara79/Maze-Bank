@@ -30,6 +30,10 @@ public class LoginController implements Initializable {
         login_btn.setOnAction(actionEvent -> onLogin());
     }
 
+    /**
+     *  Evaluates login credentials and displays
+     *  the client window, the admin window or an error message
+     */
     private void onLogin() {
         // Using login_btn field (or any other field) to get access to current (login) stage
         Stage loginStage = (Stage) login_btn.getScene().getWindow();
@@ -67,9 +71,11 @@ public class LoginController implements Initializable {
         }
     }
 
+    /**
+     *  Sets payee_address_lbl text to "Username" or "Payee Address"
+     */
     private void setAcc_selector() {
         Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue());
-        // Change Payee Address label accordingly
         if(acc_selector.getValue().equals(AccountType.Administrator)) {
             payee_address_lbl.setText("Username:");
         } else {
