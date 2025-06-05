@@ -9,7 +9,7 @@ public class DatabaseDriver {
 
     public DatabaseDriver() {
         try {
-            this.conn = DriverManager.getConnection("jdbc:sqlite:devbank.db");
+            this.conn = DriverManager.getConnection("jdbc:sqlite:mazebank.db");
         } catch (SQLException e) {
             System.out.println("Couldn't connect to database...");
         }

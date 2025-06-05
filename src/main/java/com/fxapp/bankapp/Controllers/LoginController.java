@@ -24,7 +24,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        acc_selector.setItems(FXCollections.observableArrayList(AccountType.Client, AccountType.Administrator));
+        acc_selector.setItems(FXCollections.observableArrayList(AccountType.Client, AccountType.Admin));
         acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
         acc_selector.valueProperty().addListener(observable -> setAcc_selector());
         login_btn.setOnAction(actionEvent -> onLogin());
@@ -50,7 +50,7 @@ public class LoginController implements Initializable {
             } else {
                 payee_address_fld.setText("");
                 password_fld.setText("");
-                Model.getInstance().setErrorMsg("Client: No Such Login Credentials");
+                Model.getInstance().setErrorMsg("Error : No Such Login Credentials");
                 Model.getInstance().getViewFactory().showErrorWindow();
             }
         } else {
@@ -65,7 +65,7 @@ public class LoginController implements Initializable {
             } else {
                 payee_address_fld.setText("");
                 password_fld.setText("");
-                Model.getInstance().setErrorMsg("Admin: No Such Login Credentials");
+                Model.getInstance().setErrorMsg("Error : No Such Login Credentials");
                 Model.getInstance().getViewFactory().showErrorWindow();
             }
         }
@@ -76,7 +76,7 @@ public class LoginController implements Initializable {
      */
     private void setAcc_selector() {
         Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue());
-        if(acc_selector.getValue().equals(AccountType.Administrator)) {
+        if(acc_selector.getValue().equals(AccountType.Admin)) {
             payee_address_lbl.setText("Username:");
         } else {
             payee_address_lbl.setText("Payee Address:");

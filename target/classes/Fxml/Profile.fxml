@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="profile_container"
+            stylesheets="@../Styles/Profile.css" xmlns="http://javafx.com/javafx/19.0.2.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.fxapp.bankapp.Controllers.Client.ProfileController">
+    <Text layoutX="321.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Profile"
+          AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0"/>
+
+</AnchorPane>

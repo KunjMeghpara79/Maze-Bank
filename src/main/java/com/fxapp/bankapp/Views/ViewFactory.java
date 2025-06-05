@@ -164,7 +164,7 @@ public class ViewFactory {
         stage.setScene(scene);
         stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/icon.png"))));
         stage.setResizable(false);
-        stage.setTitle("DEV Bank");
+        stage.setTitle("Maze Bank");
         stage.show();
     }
 }
