@@ -35,7 +35,7 @@
 ![Admin Panel](https://github.com/KunjMeghpara79/Maze-Bank/blob/master/Screenshot%202025-06-05%20114821.png?raw=true)
 
 ### 👤 Client Panel
-![Client Panel](screenshots/client_panel.png)
+![Client Panel](https://github.com/KunjMeghpara79/Maze-Bank/blob/master/Screenshot%202025-06-05%20115055.png?raw=true)
 
 ---
 
@@ -49,5 +49,4 @@
 
 ---
 
-## 📁 Project Structure
 
