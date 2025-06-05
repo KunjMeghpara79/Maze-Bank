@@ -29,7 +29,7 @@
 ## 📷 Screenshots
 
 ### 🔐 Login Page
-![Login Page]((https://github.com/KunjMeghpara79/Maze-Bank/blob/master/Screenshot%202025-06-05%20114736.png?raw=true))
+![Login Page](https://github.com/KunjMeghpara79/Maze-Bank/blob/master/Screenshot%202025-06-05%20114736.png?raw=true)
 
 ### 🛠️ Admin Panel
 ![Admin Panel](screenshots/admin_panel.png)
@@ -47,5 +47,7 @@
 - FXML
 - CSS
 
+---
 
+## 📁 Project Structure
 
