@@ -2,9 +2,108 @@
     -fx-background-color: #EEEEEE;
 }
 
-.profile_container Text {
+.profile_title {
     -fx-fill: #000000;
     -fx-font-size: 2.5em;
     -fx-font-family: "Calibri Light";
+    -fx-font-weight: bold;
 }
 
+/* Section Styles */
+.profile_section {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, #CCCCCC, 5, 0, 0, 3);
+}
+
+.section_title {
+    -fx-fill: #132A13;
+    -fx-font-size: 1.8em;
+    -fx-font-family: "Calibri Light";
+    -fx-font-weight: bold;
+}
+
+.section_icon {
+    -fx-fill: #132A13;
+}
+
+/* Information Container */
+.info_container {
+    -fx-padding: 10 0 0 0;
+}
+
+.info_field {
+    -fx-min-width: 200;
+}
+
+.field_label {
+    -fx-fill: #666666;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+    -fx-font-weight: normal;
+}
+
+.field_value {
+    -fx-text-fill: #000000;
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-padding: 8 12 8 12;
+    -fx-background-color: #F8F8F8;
+    -fx-background-radius: 5;
+    -fx-border-color: #DDDDDD;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.payee_address {
+    -fx-text-fill: #009688;
+    -fx-font-family: "Courier New";
+}
+
+/* Account Information Styles */
+.accounts_container {
+    -fx-padding: 10 0 0 0;
+    -fx-alignment: top_left;
+}
+
+.account_info {
+    -fx-background-color: #F9F9F9;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-min-width: 300;
+}
+
+.account_type {
+    -fx-fill: #132A13;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Calibri Light";
+    -fx-font-weight: bold;
+}
+
+.account_number {
+    -fx-font-family: "Courier New";
+    -fx-text-fill: #333333;
+}
+
+.balance_amount {
+    -fx-text-fill: #009688;
+    -fx-font-size: 1.6em;
+}
+
+.currency_icon {
+    -fx-fill: #009688;
+}
+
+/* Responsive adjustments */
+.profile_container VBox {
+    -fx-spacing: 15;
+}
+
+.profile_container HBox {
+    -fx-spacing: 10;
+}
