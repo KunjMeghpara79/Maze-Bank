@@ -6,97 +6,100 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="profile_container" stylesheets="@../Styles/Profile.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fxapp.bankapp.Controllers.Client.ProfileController">
-   <Text layoutX="321.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="profile_title" text="Client Profile" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
    
-   <VBox layoutX="20.0" layoutY="80.0" prefHeight="600.0" prefWidth="810.0" spacing="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+   <!-- Header Section -->
+   <VBox layoutX="20.0" layoutY="30.0" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page_title" text="My Profile" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page_subtitle" text="Personal Information &amp; Account Details" />
+   </VBox>
+   
+   <!-- Main Profile Card -->
+   <VBox layoutX="20.0" layoutY="120.0" spacing="0.0" styleClass="profile_main_card" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="120.0">
       
-      <!-- Personal Information Section -->
-      <VBox spacing="20.0" styleClass="profile_section">
-         <HBox alignment="CENTER_LEFT" spacing="15.0">
-            <FontAwesomeIconView glyphName="USER" size="25" styleClass="section_icon" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Personal Information" />
-         </HBox>
+      <!-- Profile Header with Avatar -->
+      <HBox alignment="CENTER_LEFT" spacing="30.0" styleClass="profile_header">
+         <!-- Avatar Circle -->
+         <VBox alignment="CENTER" styleClass="avatar_container">
+            <Circle fill="#009688" radius="50.0" styleClass="avatar_circle" />
+            <FontAwesomeIconView glyphName="USER" size="60" styleClass="avatar_icon" />
+         </VBox>
          
-         <VBox spacing="25.0" styleClass="info_container">
-            <HBox spacing="50.0">
-               <VBox spacing="8.0" styleClass="info_field">
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="First Name" />
-                  <Label fx:id="first_name_lbl" styleClass="field_value" text="John" />
-               </VBox>
-               <VBox spacing="8.0" styleClass="info_field">
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Last Name" />
-                  <Label fx:id="last_name_lbl" styleClass="field_value" text="Doe" />
-               </VBox>
+         <!-- Name and Basic Info -->
+         <VBox spacing="15.0" styleClass="header_info">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <Label fx:id="first_name_lbl" styleClass="name_primary" text="John" />
+               <Label fx:id="last_name_lbl" styleClass="name_primary" text="Doe" />
+            </HBox>
+            <Label fx:id="payee_address_lbl" styleClass="payee_address_display" text="@jdoe1" />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <FontAwesomeIconView glyphName="CALENDAR" size="16" styleClass="info_icon" />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="join_label" text="Member since" />
+               <Label fx:id="date_created_lbl" styleClass="join_date" text="January 15, 2024" />
+            </HBox>
+         </VBox>
+      </HBox>
+      
+      <!-- Detailed Information Grid -->
+      <VBox spacing="40.0" styleClass="details_section">
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+         
+         <!-- Personal Details -->
+         <VBox spacing="25.0" styleClass="info_group">
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+               <FontAwesomeIconView glyphName="USER_CIRCLE" size="24" styleClass="section_icon" />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_heading" text="Personal Details" />
             </HBox>
             
-            <VBox spacing="8.0" styleClass="info_field">
-               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Payee Address" />
-               <Label fx:id="payee_address_lbl" styleClass="field_value payee_address" text="@jdoe1" />
-            </VBox>
+            <HBox spacing="80.0" styleClass="info_row_container">
+               <!-- First Name -->
+               <VBox spacing="8.0" styleClass="info_item">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="FIRST NAME" />
+                  <Label fx:id="first_name_detail" styleClass="field_value" text="John" />
+               </VBox>
+               
+               <!-- Last Name -->
+               <VBox spacing="8.0" styleClass="info_item">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="LAST NAME" />
+                  <Label fx:id="last_name_detail" styleClass="field_value" text="Doe" />
+               </VBox>
+            </HBox>
+         </VBox>
+         
+         <!-- Account Identity -->
+         <VBox spacing="25.0" styleClass="info_group">
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+               <FontAwesomeIconView glyphName="AT" size="24" styleClass="section_icon" />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_heading" text="Account Identity" />
+            </HBox>
             
-            <VBox spacing="8.0" styleClass="info_field">
-               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Account Created" />
-               <Label fx:id="date_created_lbl" styleClass="field_value" text="2024-01-15" />
+            <VBox spacing="8.0" styleClass="info_item">
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="PAYEE ADDRESS" />
+               <Label fx:id="payee_address_detail" styleClass="payee_value" text="@jdoe1" />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_description" text="Use this address to receive payments from other users" />
             </VBox>
          </VBox>
-      </VBox>
-      
-      <!-- Account Information Section -->
-      <VBox spacing="20.0" styleClass="profile_section">
-         <HBox alignment="CENTER_LEFT" spacing="15.0">
-            <FontAwesomeIconView glyphName="BANK" size="25" styleClass="section_icon" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Account Information" />
-         </HBox>
          
-         <HBox spacing="40.0" styleClass="accounts_container">
-            <!-- Checking Account -->
-            <VBox spacing="20.0" styleClass="account_card">
-               <HBox alignment="CENTER_LEFT" spacing="10.0">
-                  <FontAwesomeIconView glyphName="CREDIT_CARD" size="20" styleClass="account_icon" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="account_type" text="Current Account" />
-               </HBox>
-               
-               <VBox spacing="15.0">
-                  <VBox spacing="5.0">
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Account Number" />
-                     <Label fx:id="checking_account_lbl" styleClass="account_number" text="1234567890" />
-                  </VBox>
-                  <VBox spacing="5.0">
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Current Balance" />
-                     <HBox alignment="CENTER_LEFT" spacing="8.0">
-                        <FontAwesomeIconView glyphName="RUPEE" size="18" styleClass="currency_icon" />
-                        <Label fx:id="checking_balance_lbl" styleClass="balance_amount" text="5000.00" />
-                     </HBox>
-                  </VBox>
-               </VBox>
-            </VBox>
+         <!-- Membership Information -->
+         <VBox spacing="25.0" styleClass="info_group">
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+               <FontAwesomeIconView glyphName="CLOCK_ALT" size="24" styleClass="section_icon" />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_heading" text="Membership Information" />
+            </HBox>
             
-            <!-- Savings Account -->
-            <VBox spacing="20.0" styleClass="account_card">
-               <HBox alignment="CENTER_LEFT" spacing="10.0">
-                  <FontAwesomeIconView glyphName="PIGGY_BANK" size="20" styleClass="account_icon" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="account_type" text="Savings Account" />
-               </HBox>
-               
-               <VBox spacing="15.0">
-                  <VBox spacing="5.0">
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Account Number" />
-                     <Label fx:id="savings_account_lbl" styleClass="account_number" text="0987654321" />
-                  </VBox>
-                  <VBox spacing="5.0">
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="Current Balance" />
-                     <HBox alignment="CENTER_LEFT" spacing="8.0">
-                        <FontAwesomeIconView glyphName="RUPEE" size="18" styleClass="currency_icon" />
-                        <Label fx:id="savings_balance_lbl" styleClass="balance_amount" text="10000.00" />
-                     </HBox>
-                  </VBox>
-               </VBox>
+            <VBox spacing="8.0" styleClass="info_item">
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_label" text="ACCOUNT CREATED" />
+               <Label fx:id="date_created_detail" styleClass="field_value" text="January 15, 2024" />
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field_description" text="Date when your Maze Bank account was established" />
             </VBox>
-         </HBox>
+         </VBox>
+         
       </VBox>
-      
    </VBox>
+   
 </AnchorPane>

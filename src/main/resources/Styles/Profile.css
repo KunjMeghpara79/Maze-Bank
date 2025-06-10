@@ -1,117 +1,166 @@
 .profile_container {
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: linear-gradient(to bottom, #F8F9FA, #E9ECEF);
 }
 
-.profile_title {
-    -fx-fill: #000000;
-    -fx-font-size: 2.5em;
+/* Page Header */
+.page_title {
+    -fx-fill: #132A13;
+    -fx-font-size: 3.2em;
     -fx-font-family: "Calibri Light";
     -fx-font-weight: bold;
 }
 
-/* Section Styles */
-.profile_section {
+.page_subtitle {
+    -fx-fill: #6C757D;
+    -fx-font-size: 1.3em;
+    -fx-font-family: "Calibri Light";
+    -fx-font-weight: normal;
+}
+
+/* Main Profile Card */
+.profile_main_card {
     -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20;
+    -fx-padding: 50;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 15, 0, 0, 5);
+    -fx-border-color: rgba(0,150,136,0.1);
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+}
+
+/* Profile Header Section */
+.profile_header {
+    -fx-padding: 0 0 30 0;
+    -fx-border-color: #E9ECEF;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* Avatar Styling */
+.avatar_container {
+    -fx-min-width: 120;
+    -fx-min-height: 120;
+    -fx-max-width: 120;
+    -fx-max-height: 120;
+}
+
+.avatar_circle {
+    -fx-fill: linear-gradient(to bottom right, #009688, #00695C);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 2);
+}
+
+.avatar_icon {
+    -fx-fill: #FFFFFF;
+    -fx-translate-y: -50;
+}
+
+/* Header Information */
+.header_info {
+    -fx-min-width: 400;
+}
+
+.name_primary {
+    -fx-text-fill: #132A13;
+    -fx-font-size: 2.8em;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.payee_address_display {
+    -fx-text-fill: #009688;
+    -fx-font-family: "Courier New";
+    -fx-font-size: 1.8em;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(0,150,136,0.1);
+    -fx-background-radius: 8;
+    -fx-padding: 8 15 8 15;
+}
+
+.info_icon {
+    -fx-fill: #6C757D;
+}
+
+.join_label {
+    -fx-fill: #6C757D;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.join_date {
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+/* Details Section */
+.details_section {
+    -fx-padding: 20 0 0 0;
+}
+
+.info_group {
+    -fx-background-color: #F8F9FA;
     -fx-background-radius: 12;
     -fx-padding: 30;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);
-}
-
-.section_title {
-    -fx-fill: #132A13;
-    -fx-font-size: 1.8em;
-    -fx-font-family: "Calibri Light";
-    -fx-font-weight: bold;
+    -fx-border-color: #E9ECEF;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
 }
 
 .section_icon {
     -fx-fill: #009688;
 }
 
-/* Information Container */
-.info_container {
-    -fx-padding: 15 0 0 0;
+.section_heading {
+    -fx-fill: #132A13;
+    -fx-font-size: 1.6em;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
 }
 
-.info_field {
+/* Information Items */
+.info_row_container {
+    -fx-padding: 10 0 0 0;
+}
+
+.info_item {
     -fx-min-width: 250;
 }
 
 .field_label {
-    -fx-fill: #666666;
-    -fx-font-size: 1.0em;
+    -fx-fill: #6C757D;
+    -fx-font-size: 0.9em;
     -fx-font-family: "Calibri Light";
-    -fx-font-weight: normal;
-    -fx-text-transform: uppercase;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 1px;
 }
 
 .field_value {
-    -fx-text-fill: #333333;
-    -fx-font-size: 1.5em;
-    -fx-font-family: "Calibri";
-    -fx-font-weight: normal;
-    -fx-padding: 0;
-    -fx-background-color: transparent;
-}
-
-.payee_address {
-    -fx-text-fill: #009688;
-    -fx-font-family: "Courier New";
-    -fx-font-weight: bold;
-    -fx-font-size: 1.4em;
-}
-
-/* Account Information Styles */
-.accounts_container {
-    -fx-padding: 15 0 0 0;
-    -fx-alignment: top_left;
-}
-
-.account_card {
-    -fx-background-color: linear-gradient(to bottom, #F8F9FA, #FFFFFF);
-    -fx-background-radius: 10;
-    -fx-padding: 25;
-    -fx-border-color: #E9ECEF;
-    -fx-border-width: 1;
-    -fx-border-radius: 10;
-    -fx-min-width: 320;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 1);
-}
-
-.account_type {
-    -fx-fill: #132A13;
-    -fx-font-size: 1.4em;
-    -fx-font-family: "Calibri Light";
-    -fx-font-weight: bold;
-}
-
-.account_icon {
-    -fx-fill: #009688;
-}
-
-.account_number {
-    -fx-text-fill: #495057;
-    -fx-font-family: "Courier New";
-    -fx-font-size: 1.3em;
-    -fx-font-weight: normal;
-    -fx-padding: 0;
-    -fx-background-color: transparent;
-}
-
-.balance_amount {
-    -fx-text-fill: #009688;
+    -fx-text-fill: #132A13;
     -fx-font-size: 1.8em;
     -fx-font-family: "Calibri";
+    -fx-font-weight: normal;
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.payee_value {
+    -fx-text-fill: #009688;
+    -fx-font-family: "Courier New";
+    -fx-font-size: 1.8em;
     -fx-font-weight: bold;
     -fx-padding: 0;
     -fx-background-color: transparent;
 }
 
-.currency_icon {
-    -fx-fill: #009688;
+.field_description {
+    -fx-fill: #6C757D;
+    -fx-font-size: 1.0em;
+    -fx-font-family: "Calibri Light";
+    -fx-font-style: italic;
+    -fx-wrap-text: true;
 }
 
-/* Clean spacing */
+/* Responsive spacing */
 .profile_container VBox {
     -fx-spacing: 0;
 }
